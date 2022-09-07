@@ -1,0 +1,42 @@
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "email":"admin@gmail.com",
+  "password":"admin"
+}
+
+###
+POST http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "email":"admin@gmail.com",
+  "password":"admin"
+}
+
+###
+POST http://localhost:5000/api/notes
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTc0Yjk5OWJlZTE1N2JkNDBiZTY3MCIsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY2MjQ3NTcxMSwiZXhwIjoxNjYyNTYyMTExfQ.FMdD2df27e9-L3GxDu4AJxNKSPcT699jzPYSWTYor_Y
+
+{
+  "title":"Post so 1",
+  "content":"Bai post so 1"  
+}
+
+###
+GET http://localhost:5000/api/notes/63175dcb861a0557c28db315
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTc0Yjk5OWJlZTE1N2JkNDBiZTY3MCIsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY2MjQ3NTcxMSwiZXhwIjoxNjYyNTYyMTExfQ.FMdD2df27e9-L3GxDu4AJxNKSPcT699jzPYSWTYor_Y
+
+###
+PUT http://localhost:5000/api/notes/63175dcb861a0557c28db315
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTc0Yjk5OWJlZTE1N2JkNDBiZTY3MCIsIm5hbWUiOiJhZG1pbiIsImlhdCI6MTY2MjQ3NTcxMSwiZXhwIjoxNjYyNTYyMTExfQ.FMdD2df27e9-L3GxDu4AJxNKSPcT699jzPYSWTYor_Y
+
+{
+  "title":"Post so 1.1",
+  "content":"Bai post so 1.1",
+  "date": "2022-09-06T14:48:43.361Z"  
+}
